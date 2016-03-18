@@ -1,0 +1,71 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+                           http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd 
+                           http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+                           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- pour utiliser les annotations dans les fichiers java -->
+	<context:annotation-config />
+	<context:component-scan base-package="fr.treeptik" />
+	<context:property-placeholder location="file:configuration.properties" />
+	<aop:aspectj-autoproxy />
+
+	<!-- pour configurer la connection à la base de donnée -->
+	<bean id="datasource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="${database.driver}" />
+		<property name="url" value="${database.url}" />
+		<property name="username" value="${database.user}" />
+		<property name="password" value="${database.password}" />
+		
+		
+	</bean>
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="messages" />
+	</bean>
+
+<!-- 	<bean class="fr.treeptik.utils.SimpleBeanFactoryPostProcessor" /> -->
+
+	<bean id="notifier" class="fr.treeptik.notify.FileNotifier" />
+
+	<!-- On injecte Notifier dans notifyAdvice -->
+	<bean id="notifyAdvice" class="fr.treeptik.notify.NotifierAdvice">
+		<property name="notifier" ref="notifier" />
+	</bean>
+	
+	
+<!-- 	<bean id="jpaVendorAdapter" -->
+<!-- 	class="org.springframework.orm.jpa.vendor.Hibernate -->
+	<!-- JpaVendorAdapter"> --> 
+<!-- 	<property name="hibernate.hbm2ddl.auto" value="validate"/> -->
+<!-- 	<property name="showSql" value="false" /> -->
+<!-- 	<property name="generateDdl" value="true" /> -->
+<!-- 	<property name="databasePlatform" value="org.hibernate.dialect.MySQLDialect" -->
+<!-- 	/> -->
+	
+	
+	<!-- pour pouvoir envoyer des mails il faut configurer la connection smtp -->
+	<!-- <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl"> -->
+
+	<!-- <property name="host" value="smtp.gmail.com" /> -->
+	<!-- <property name="port" value="465" /> -->
+	<!-- <property name="username" value="user-dev@treeptik.fr" /> -->
+	<!-- <property name="password" value="user-dev1234" /> -->
+	<!-- <property name="javaMailProperties"> -->
+	<!-- <props> -->
+	<!-- <prop key="mail.smtp.auth">true</prop> -->
+	<!-- <prop key="mail.smtp.ssl.enable">true</prop> -->
+	<!-- </props> -->
+	<!-- </property> -->
+	<!-- </bean> -->
+
+</beans>

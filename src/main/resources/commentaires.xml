@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<listCommentaires xmlns="http://www.w3schools.com">
+	<commentaires>
+		<com_id>1</com_id>
+		<art_id>1</art_id>
+		<com_nom>toti1</com_nom>
+		<com_email>toti1@toti.fr</com_email>
+		<com_texte>Le commmentaires vient du xml</com_texte>
+		<com_date>2012-12-05</com_date>
+		<com_validation>true</com_validation>
+	</commentaires>
+	<commentaires>
+		<com_id>2</com_id>
+		<art_id>1</art_id>
+		<com_nom>toti2</com_nom>
+		<com_email>toti2@toti.fr</com_email>
+		<com_texte>Le commmentaires vient du xml</com_texte>
+		<com_date>2012-12-05</com_date>
+		<com_validation>true</com_validation>
+	</commentaires>
+	<commentaires>
+		<com_id>3</com_id>
+		<art_id>1</art_id>
+		<com_nom>toti3</com_nom>
+		<com_email>toti3@toti.fr</com_email>
+		<com_texte>Le commmentaires vient du xml</com_texte>
+		<com_date>2012-12-05</com_date>
+		<com_validation>true</com_validation>
+	</commentaires>
+	<commentaires>
+		<com_id>4</com_id>
+		<art_id>2</art_id>
+		<com_nom>tota</com_nom>
+		<com_email>tota@tota.fr</com_email>
+		<com_texte>Le commmentaires vient du xml</com_texte>
+		<com_date>2012-12-05</com_date>
+		<com_validation>true</com_validation>
+	</commentaires>
+	<commentaires>
+		<com_id>5</com_id>
+		<art_id>2</art_id>
+		<com_nom>terre</com_nom>
+		<com_email>terre@terre.tr</com_email>
+		<com_texte>Ajout commentaire</com_texte>
+		<com_date>2012-12-25+01:00</com_date>
+		<com_validation>true</com_validation>
+	</commentaires>
+	<commentaires>
+		<com_id>7</com_id>
+		<art_id>2</art_id>
+		<com_nom>terre1</com_nom>
+		<com_email>terre1@terre.tr</com_email>
+		<com_texte>Ajout commentaire1</com_texte>
+		<com_date>2012-12-25+01:00</com_date>
+		<com_validation>true</com_validation>
+	</commentaires>
+	<commentaires>
+		<com_id>6</com_id>
+		<art_id>2</art_id>
+		<com_nom>terre</com_nom>
+		<com_email>terre@terre.tr</com_email>
+		<com_texte>Ajout commentaire</com_texte>
+		<com_date>2012-12-25+01:00</com_date>
+		<com_validation>true</com_validation>
+	</commentaires>
+</listCommentaires>

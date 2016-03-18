@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!-- Bloc obligatoire tel quel -->
+<!-- <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.w3schools.com"
+xmlns="http://www.w3schools.com"
+elementFormDefault="qualified">
+
+
+	<xs:element name="listCommentaires">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="commentaires" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="commentaires">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="com_id" type="xs:int" minOccurs="1" />
+				<xs:element name="art_id" type="xs:int" minOccurs="1" />
+				<xs:element name="com_nom" type="xs:string" minOccurs="1" />
+				<xs:element name="com_email" type="xs:string" minOccurs="1" />
+				<xs:element name="com_texte" type="xs:string" minOccurs="1" />
+				<xs:element name="com_date" type="xs:date" minOccurs="1" />
+				<xs:element name="com_validation" type="xs:boolean" minOccurs="1" />
+				
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema> 

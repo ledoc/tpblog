@@ -1,0 +1,2 @@
+Tue Apr 22 11:34:37 CEST 2014 - Article [id=null, titre=carrie, chapeau=coucou, contenu=cont2, creationDate=Mon Jul 28 00:00:00 CEST 1980, enLigne=true, categorie=Categorie [id=3, name=cat1, url=url1], auteur=Auteur [id=2, nom=king, prenom=stephen
+url=www.stephen.king.com, email=stephen.king@hotmail.com]] - 
